@@ -5,6 +5,14 @@
     android:id="@+id/nav_graph"
     app:startDestination="@+id/bookSearchFragment">
 
+    <action
+        android:id="@+id/actionShowAuthor"
+        app:destination="@id/authorDetails"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+
     <fragment
         android:id="@+id/bookSearchFragment"
         android:name="com.raywenderlich.android.bookmanstreasure.ui.booksearch.BookSearchFragment"
@@ -32,14 +40,6 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
-
-        <action
-            android:id="@+id/actionShowAuthor"
-            app:destination="@id/authorDetails"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
 
     </fragment>
 
