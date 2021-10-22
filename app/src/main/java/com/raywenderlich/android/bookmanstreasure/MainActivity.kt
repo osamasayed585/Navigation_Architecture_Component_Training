@@ -41,6 +41,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.activity_main.view.*
+import com.raywenderlich.android.bookmanstreasure.destinations.AuthorDetailsNavigator
 
 class MainActivity : AppCompatActivity(), MainActivityDelegate {
 
@@ -49,7 +50,13 @@ class MainActivity : AppCompatActivity(), MainActivityDelegate {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
-    //TODO initialize navigation graph
+    // initialize navigation graph
+    val destination = AuthorDetailsNavigator(navHostFragment.childFragmentManager)
+    navHostFragment.findNavController().navigatorProvider.addNavigator(destination)
+
+    val inflater = navHostFragment.findNavController().navInflater
+    val graph = inflater.inflate(R.navigation.nav_graph)
+    navHostFragment.findNavController().graph = graph
   }
 
   override fun onBackPressed() {

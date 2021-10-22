@@ -32,6 +32,15 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/actionShowAuthor"
+            app:destination="@id/authorDetails"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
     </fragment>
 
     <fragment
@@ -54,6 +63,9 @@
         android:label="book_details_fragment"
         tools:layout="@layout/fragment_book_details">
     </fragment>
+
+    <author
+        android:id="@+id/authorDetails" />
 
 
 </navigation>
