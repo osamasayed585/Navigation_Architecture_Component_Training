@@ -55,7 +55,7 @@ class AuthorDetailsViewModel : ViewModel() {
       return
     }
 
-    val author: Author? = arguments.get(AUTHOR_ARGUMENT) as Author
+    val author: Author? = arguments.get(AUTHOR_ARGUMENT) as Author?
     this.author.postValue(author)
   }
 }
